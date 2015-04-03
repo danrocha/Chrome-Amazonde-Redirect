@@ -1,0 +1,19 @@
+{
+  "name": "Amazon.de Redirect",
+  "manifest_version": 2,
+  "version": "1.0",
+  "description": "View an Amazon.com product page on Amazon.de",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*.amazon.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "page_action": {
+      "default_icon": "flag-de-16-16.png"
+  },
+  "permissions": ["tabs"]
+}
